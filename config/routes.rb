@@ -1,4 +1,6 @@
 Cowork::Application.routes.draw do
+  get "store/index"
+
   resources :products
 
   resources :posts do
