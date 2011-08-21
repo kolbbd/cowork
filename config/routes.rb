@@ -1,9 +1,14 @@
 Cowork::Application.routes.draw do
+  devise_for :users
+
   resources :line_items
 
   resources :carts
 
+  get "home/index"
   get "store/index"
+   
+
 
   resources :products
 
@@ -12,6 +17,7 @@ Cowork::Application.routes.draw do
 end
 
   get "home/index"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,7 +68,7 @@ end
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => "home#index"
+   root :to => "store#index", :as=> "store"
 
   # See how all your routes lay out with "rake routes"
 
