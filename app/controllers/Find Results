@@ -1,0 +1,12 @@
+Searching 648 files for "cart_id"
+
+C:\Sites\cowork\app\controllers\application_controller.rb:
+   13  
+   14    def current_cart
+   15:     Cart.find(session[:cart_it])
+   16      rescue ActiveRecord::RecordNotFound
+   17      cart = Cart.create
+   18:     session[:cart_it] = cart.id
+   19      cart
+   20    end
+
