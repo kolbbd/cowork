@@ -1,4 +1,6 @@
 Cowork::Application.routes.draw do
+  resources :authentications
+
   devise_for :users
 
   resources :line_items
@@ -14,6 +16,7 @@ Cowork::Application.routes.draw do
 
   resources :posts do
   resources :comments
+
 end
 
   get "home/index"
@@ -75,4 +78,6 @@ end
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+
+  match "/auth/:provider/callback" => "authentications#create"
 end
