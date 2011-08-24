@@ -35,9 +35,10 @@ ActiveRecord::Schema.define(:version => 20110824150232) do
 
   create_table "line_items", :force => true do |t|
     t.integer  "product_id"
-    t.integer  "cart_id"
+    t.integer  "cart_it"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cart_id"
   end
 
   create_table "posts", :force => true do |t|

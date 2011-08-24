@@ -7,8 +7,9 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 gem 'devise'
-gem 'omniauth'
+
 gem 'nifty-generators'
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'
