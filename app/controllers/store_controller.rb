@@ -3,5 +3,7 @@ class StoreController < ApplicationController
   	@products = Product.all
   end
 
-  
+  def show
+  	@products = Product.all
+  end
 end

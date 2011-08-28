@@ -1,4 +1,4 @@
-<% title "Sign In" %>
+<% "Sign In" %>
 
 <% if @authentications %>
   <% unless @authentications.empty? %>
@@ -37,3 +37,12 @@
   OpenID
 </a>
 <div class="clear"></div>
+
+<div id="user_nav">
+   <% if user_signed_in? %>
+     
+   <%else%>
+   <strong>Don't use these services? You can </strong>
+     <%= link_to "Sign in", new_user_session_path %> or <%=link_to "Sign up", new_user_registration_path %> with a password.
+   <%end%>
+ </div>
